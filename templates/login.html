@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Entrar - IMEI Control</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body class="login-body">
+  <form class="login-box" method="post">
+    <div class="brand">IMEI Control</div>
+    <h1>Entrar</h1>
+    {% if error %}<div class="alert">{{ error }}</div>{% endif %}
+    <label>Senha do admin</label>
+    <input name="password" type="password" autofocus required>
+    <button type="submit">Acessar painel</button>
+  </form>
+</body>
+</html>

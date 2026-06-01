@@ -1,0 +1,10 @@
+{
+  "server_url": "https://seu-app.up.railway.app",
+  "token": "mesmo-valor-de-INGEST_TOKEN",
+  "location_code": "pc-01",
+  "location_name": "PC 01",
+  "folder": "C:/caminho/da/pasta",
+  "interval_seconds": 60,
+  "recent_minutes": 1440,
+  "extensions": [".txt", ".csv", ".log", ".xml", ".json"]
+}

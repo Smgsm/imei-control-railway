@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IMEI Control</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="top">
+      <div>
+        <div class="brand">IMEI Control</div>
+        <h1>Busca centralizada nos 3 PCs</h1>
+        <p>Cada agente envia os IMEIs encontrados na pasta local para este painel.</p>
+      </div>
+      <form method="post" action="/logout"><button class="ghost" type="submit">Sair</button></form>
+    </header>
+
+    <section class="metrics">
+      <div class="metric"><span>IMEIs salvos</span><strong id="m-total">0</strong></div>
+      <div class="metric"><span>IMEIs unicos</span><strong id="m-unique">0</strong></div>
+      <div class="metric"><span>Locais</span><strong id="m-locations">0</strong></div>
+      <div class="metric"><span>Ultima leitura</span><strong class="small" id="m-last">-</strong></div>
+    </section>
+
+    <section class="searchbar">
+      <input id="imei" inputmode="numeric" maxlength="15" placeholder="Digite o IMEI">
+      <select id="location"><option value="">Todos os locais</option></select>
+      <button onclick="search()">Buscar</button>
+    </section>
+
+    <section class="card">
+      <div class="card-head"><strong>Resultados</strong><span id="count">0 itens</span></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>IMEI</th><th>Local</th><th>Arquivo</th><th>Atualizado</th><th>Pasta</th></tr></thead>
+          <tbody id="rows"><tr><td colspan="5" class="empty">Nenhum resultado ainda.</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
